@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='content/site.css') }}">
+    <style>
+        .circle-btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .circle-btn {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+            .circle-btn:hover {
+                background-color: #45a049;
+                transform: scale(1.1);
+            }
+
+            .circle-btn a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+            }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        </header>
+        <!-- Dodanie prostych kółek-przycisków -->
+        <nav>
+            <div class="circle-btn-container">
+                <div class="circle-btn">
+                    <a href="{{ url_for('about') }}">
+                        <p>O nas</p>
+                    </a>
+                </div>
+                <div class="circle-btn">
+                    <a href="{{ url_for('page1') }}">
+                        <p>Formularz</p>
+                    </a>
+                </div>
+                <div class="circle-btn">
+                    <a href="{{ url_for('page2') }}">
+                        <p>Coś</p>
+                    </a>
+                </div>
+                <div class="circle-btn">
+                    <a href="{{ url_for('page3') }}">
+                        <p>Ustawienia</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Sekcja główna -->
+        <main>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/zdj-skora.png') }}" alt="Skin Diagram">
+            </div>
+            <!-- Formularz przesyłania zdjęcia -->
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="file-upload" class="upload-label">
+                    Dodaj zdjęcie do analizy
+                </label>
+                <input id="file-upload" type="file" name="file" accept="image/*" required>
+
+                <!-- Dodanie przycisku zatwierdzającego przesłanie -->
+                <button type="submit" class="upload-btn">Prześlij</button>
+            </form>
+        </main>
+    </div>
+
+    
+
+</body>
+</html>

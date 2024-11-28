@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przesłano zdjęcie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='content/site.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>SKIN</h1>
+        </header>
+        <main>
+            <h2 style="color: green;">Zdjęcie zostało pomyślnie przesłane!</h2>
+            <div class="image-container">
+                <!-- Wyświetlanie przesłanego zdjęcia -->
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Przesłane zdjęcie" style="max-width: 100%; border: 2px solid #ccc; border-radius: 10px;">
+            </div>
+            <div class="buttons">
+                <a href="/" class="upload-btn">Wróć na stronę główną</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

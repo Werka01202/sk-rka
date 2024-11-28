@@ -1,0 +1,151 @@
+/* Globalne ustawienia */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #DE755B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page-container {
+    background-color: white;
+    width: 80%;
+    max-width: 1300px;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Nag³ówek */
+header h1 {
+    font-size: 6rem;
+    font-family: 'Cursive', Arial, sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Nawigacja */
+.circle-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 10px 0;
+}
+
+.circle-btn a {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #DE755B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+    .circle-btn p {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: white;
+    }
+
+
+/* G³ówna ilustracja */
+.image-container img {
+    width: 90%;
+    max-width:900px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+/* Formularz przesy³ania zdjêcia */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-label {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #DE755B;
+    cursor: pointer;
+    border: 2px dashed #DE755B;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+    .upload-label:hover {
+        background-color: #DE755B;
+        color: white;
+    }
+
+#file-upload {
+    display: none;
+}
+
+.upload-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #DE755B;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+    .upload-btn:hover {
+        background-color: #f4a896;
+    }
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #DE755B;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+    .back-link:hover {
+        background-color: #f4a896;
+    }
+
+/* Styl dla logo */
+header img.logo {
+    max-width: 100%; /* Logo nie przekroczy szerokoœci ekranu */
+    height: auto; /* Zachowanie proporcji logo */
+    max-height: 150px; /* Ograniczenie wysokoœci logo */
+    margin-bottom: 20px;
+}
+
+/* Dostosowanie przyciskow w sekcji "O nas" */
+.about-page .navbar .btn {
+    background-color: #f7a6b2;
+    margin: 10px;
+}
